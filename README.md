@@ -9,3 +9,11 @@ tm12 (with surface gripper) pick and place sequence
 - ROS2 Humble
 
 - MoveIt2
+
+# To Modify
+
+- Fix joint sequence (to move at once)
+
+- Add Surface Gripper Collision
+
+- Add Surface Gripper (To Grasp Objects)
