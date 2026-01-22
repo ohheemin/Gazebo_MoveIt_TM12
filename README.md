@@ -17,3 +17,7 @@ tm12 (with surface gripper) pick and place sequence
 - Add Surface Gripper Collision
 
 - Add Surface Gripper (To Grasp Objects)
+
+# Origin
+
+tm12 urdf xacro / tm12 launch py + not dae
