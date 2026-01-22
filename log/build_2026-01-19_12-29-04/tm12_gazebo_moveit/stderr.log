@@ -1,0 +1,8 @@
+In file included from [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:4[m[K:
+[01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/include/arm_controllers/joint_position_example_controller.hpp:6:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 그런 파일이나 디렉터리가 없습니다
+    6 | #include [01;31m[K<Eigen/Core>[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/joint_position_example_controller.dir/build.make:76: CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o] 오류 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/joint_position_example_controller.dir/all] 오류 2
+gmake: *** [Makefile:146: all] 오류 2

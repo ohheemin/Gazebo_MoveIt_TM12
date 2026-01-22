@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target tm12_pick_and_place[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/tm12_pick_and_place.dir/src/tm12_pick_and_place.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable tm12_pick_and_place[0m
+[ 75%] Built target tm12_pick_and_place

@@ -1,0 +1,12 @@
+[0.007s] Invoking command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24
+[0.041s] [ 25%] [32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o[0m
+[0.050s] [ 75%] Built target tm12_pick_and_place
+[0.087s] In file included from [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:4[m[K:
+[0.087s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/include/arm_controllers/joint_position_example_controller.hpp:6:10:[m[K [01;31m[Kfatal error: [m[KEigen/Eigen: 그런 파일이나 디렉터리가 없습니다
+[0.087s]     6 | #include [01;31m[K<Eigen/Eigen>[m[K
+[0.087s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[0.087s] compilation terminated.
+[0.088s] gmake[2]: *** [CMakeFiles/joint_position_example_controller.dir/build.make:76: CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o] 오류 1
+[0.088s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/joint_position_example_controller.dir/all] 오류 2
+[0.088s] gmake: *** [Makefile:146: all] 오류 2
+[0.090s] Invoked command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24

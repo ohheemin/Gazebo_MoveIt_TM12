@@ -1,0 +1,147 @@
+[0.000000] (-) TimerEvent: {}
+[0.000376] (tm12_gazebo_moveit) JobQueued: {'identifier': 'tm12_gazebo_moveit', 'dependencies': OrderedDict()}
+[0.000408] (tm12_gazebo_moveit) JobStarted: {'identifier': 'tm12_gazebo_moveit'}
+[0.004721] (tm12_gazebo_moveit) JobProgress: {'identifier': 'tm12_gazebo_moveit', 'progress': 'cmake'}
+[0.005038] (tm12_gazebo_moveit) Command: {'cmd': ['/usr/bin/cmake', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit', '-DCMAKE_INSTALL_PREFIX=/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit'], 'cwd': '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ko:en'), ('USER', 'ohheemin'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('HOME', '/home/ohheemin'), ('OLDPWD', '/home/ohheemin/gazebo_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1736'), ('SYSTEMD_EXEC_PID', '1985'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '1917954'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ohheemin'), ('IGN_GAZEBO_MODEL_PATH', '/opt/ros/humble/share'), ('JOURNAL_STREAM', '8:30888'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ohheemin'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/opt/ros/humble/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/air:@/tmp/.ICE-unix/1962,unix/air:/tmp/.ICE-unix/1962'), ('INVOCATION_ID', '4da8e8ba2e864c4397c765d7bdbba6f4'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:c1d415a5-1b83-4ef9-8cf4-8bdfeba81476'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/opt/ros/humble/share'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/opt/ros/humble/share'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', ':/usr/lib/x86_64-linux-gnu/cmake:/opt/ros/humble')]), 'shell': False}
+[0.039592] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.071298] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.076023] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099884] (-) TimerEvent: {}
+[0.119062] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.122530] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.122669] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.122860] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.124373] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.173662] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.177241] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.177398] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.177619] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.179809] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199945] (-) TimerEvent: {}
+[0.264735] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.300011] (-) TimerEvent: {}
+[0.323270] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.354624] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.358890] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.364695] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.372184] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.382568] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400288] (-) TimerEvent: {}
+[0.411894] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.414107] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.477929] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.496401] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.500367] (-) TimerEvent: {}
+[0.524910] (tm12_gazebo_moveit) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.530443] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.575077] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.575397] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.600431] (-) TimerEvent: {}
+[0.620383] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.621104] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.650861] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)\n'}
+[0.658634] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread \n'}
+[0.700494] (-) TimerEvent: {}
+[0.750866] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[0.780463] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found parameter_traits: 0.5.0 (/opt/ros/humble/share/parameter_traits/cmake)\n'}
+[0.789995] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.15 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.800570] (-) TimerEvent: {}
+[0.804453] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem \n'}
+[0.874948] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- library: /usr/lib/x86_64-linux-gnu/libcurl.so\n'}
+[0.893776] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.893865] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.900644] (-) TimerEvent: {}
+[0.981319] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono \n'}
+[0.998331] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options \n'}
+[1.000701] (-) TimerEvent: {}
+[1.011288] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread \n'}
+[1.060328] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.079284] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Generating done\n'}
+[1.084730] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Build files have been written to: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit\n'}
+[1.093287] (tm12_gazebo_moveit) CommandEnded: {'returncode': 0}
+[1.093707] (tm12_gazebo_moveit) JobProgress: {'identifier': 'tm12_gazebo_moveit', 'progress': 'build'}
+[1.094574] (tm12_gazebo_moveit) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit', '--', '-j24', '-l24'], 'cwd': '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ko:en'), ('USER', 'ohheemin'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('HOME', '/home/ohheemin'), ('OLDPWD', '/home/ohheemin/gazebo_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1736'), ('SYSTEMD_EXEC_PID', '1985'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '1917954'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ohheemin'), ('IGN_GAZEBO_MODEL_PATH', '/opt/ros/humble/share'), ('JOURNAL_STREAM', '8:30888'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ohheemin'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/opt/ros/humble/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/air:@/tmp/.ICE-unix/1962,unix/air:/tmp/.ICE-unix/1962'), ('INVOCATION_ID', '4da8e8ba2e864c4397c765d7bdbba6f4'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:c1d415a5-1b83-4ef9-8cf4-8bdfeba81476'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/opt/ros/humble/share'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/opt/ros/humble/share'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', ':/usr/lib/x86_64-linux-gnu/cmake:/opt/ros/humble')]), 'shell': False}
+[1.100765] (-) TimerEvent: {}
+[1.130661] (tm12_gazebo_moveit) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/tm12_pick_and_place.dir/src/tm12_pick_and_place.cpp.o\x1b[0m\n'}
+[1.131376] (tm12_gazebo_moveit) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o\x1b[0m\n'}
+[1.137701] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:4:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Karm_controllers/joint_position_example_controller.hpp: \xea\xb7\xb8\xeb\x9f\xb0 \xed\x8c\x8c\xec\x9d\xbc\xec\x9d\xb4\xeb\x82\x98 \xeb\x94\x94\xeb\xa0\x89\xed\x84\xb0\xeb\xa6\xac\xea\xb0\x80 \xec\x97\x86\xec\x8a\xb5\xeb\x8b\x88\xeb\x8b\xa4\n'}
+[1.137784] (tm12_gazebo_moveit) StderrLine: {'line': b'    4 | #include \x1b[01;31m\x1b[K<arm_controllers/joint_position_example_controller.hpp>\x1b[m\x1b[K\n'}
+[1.137816] (tm12_gazebo_moveit) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.137840] (tm12_gazebo_moveit) StderrLine: {'line': b'compilation terminated.\n'}
+[1.138304] (tm12_gazebo_moveit) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/joint_position_example_controller.dir/build.make:76: CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o] \xec\x98\xa4\xeb\xa5\x98 1\n'}
+[1.138465] (tm12_gazebo_moveit) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/joint_position_example_controller.dir/all] \xec\x98\xa4\xeb\xa5\x98 2\n'}
+[1.138489] (tm12_gazebo_moveit) StderrLine: {'line': b'gmake[1]: *** \xeb\x81\x9d\xeb\x82\x98\xec\xa7\x80 \xec\x95\x8a\xec\x9d\x80 \xec\x9e\x91\xec\x97\x85\xec\x9d\x84 \xea\xb8\xb0\xeb\x8b\xa4\xeb\xa6\xac\xea\xb3\xa0 \xec\x9e\x88\xec\x8a\xb5\xeb\x8b\x88\xeb\x8b\xa4....\n'}
+[1.200836] (-) TimerEvent: {}
+[1.301024] (-) TimerEvent: {}
+[1.401211] (-) TimerEvent: {}
+[1.501401] (-) TimerEvent: {}
+[1.601613] (-) TimerEvent: {}
+[1.701848] (-) TimerEvent: {}
+[1.802150] (-) TimerEvent: {}
+[1.902415] (-) TimerEvent: {}
+[2.002663] (-) TimerEvent: {}
+[2.102901] (-) TimerEvent: {}
+[2.203153] (-) TimerEvent: {}
+[2.303404] (-) TimerEvent: {}
+[2.403663] (-) TimerEvent: {}
+[2.503924] (-) TimerEvent: {}
+[2.604167] (-) TimerEvent: {}
+[2.704417] (-) TimerEvent: {}
+[2.804641] (-) TimerEvent: {}
+[2.904871] (-) TimerEvent: {}
+[3.005117] (-) TimerEvent: {}
+[3.105370] (-) TimerEvent: {}
+[3.205603] (-) TimerEvent: {}
+[3.305854] (-) TimerEvent: {}
+[3.406091] (-) TimerEvent: {}
+[3.506352] (-) TimerEvent: {}
+[3.606577] (-) TimerEvent: {}
+[3.706835] (-) TimerEvent: {}
+[3.807081] (-) TimerEvent: {}
+[3.907347] (-) TimerEvent: {}
+[4.007590] (-) TimerEvent: {}
+[4.107830] (-) TimerEvent: {}
+[4.208061] (-) TimerEvent: {}
+[4.308555] (-) TimerEvent: {}
+[4.408770] (-) TimerEvent: {}
+[4.509011] (-) TimerEvent: {}
+[4.609377] (-) TimerEvent: {}
+[4.709618] (-) TimerEvent: {}
+[4.809865] (-) TimerEvent: {}
+[4.910134] (-) TimerEvent: {}
+[5.010564] (-) TimerEvent: {}
+[5.110814] (-) TimerEvent: {}
+[5.211060] (-) TimerEvent: {}
+[5.311312] (-) TimerEvent: {}
+[5.411586] (-) TimerEvent: {}
+[5.511820] (-) TimerEvent: {}
+[5.612062] (-) TimerEvent: {}
+[5.712320] (-) TimerEvent: {}
+[5.812552] (-) TimerEvent: {}
+[5.912799] (-) TimerEvent: {}
+[6.013045] (-) TimerEvent: {}
+[6.113421] (-) TimerEvent: {}
+[6.213663] (-) TimerEvent: {}
+[6.313904] (-) TimerEvent: {}
+[6.414146] (-) TimerEvent: {}
+[6.514374] (-) TimerEvent: {}
+[6.614598] (-) TimerEvent: {}
+[6.714838] (-) TimerEvent: {}
+[6.815038] (-) TimerEvent: {}
+[6.915399] (-) TimerEvent: {}
+[7.015628] (-) TimerEvent: {}
+[7.115858] (-) TimerEvent: {}
+[7.216080] (-) TimerEvent: {}
+[7.316316] (-) TimerEvent: {}
+[7.416553] (-) TimerEvent: {}
+[7.516779] (-) TimerEvent: {}
+[7.617042] (-) TimerEvent: {}
+[7.624609] (tm12_gazebo_moveit) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable tm12_pick_and_place\x1b[0m\n'}
+[7.717138] (-) TimerEvent: {}
+[7.817399] (-) TimerEvent: {}
+[7.917663] (-) TimerEvent: {}
+[7.963722] (tm12_gazebo_moveit) StdoutLine: {'line': b'[ 75%] Built target tm12_pick_and_place\n'}
+[7.964438] (tm12_gazebo_moveit) StderrLine: {'line': b'gmake: *** [Makefile:146: all] \xec\x98\xa4\xeb\xa5\x98 2\n'}
+[7.966469] (tm12_gazebo_moveit) CommandEnded: {'returncode': 2}
+[7.970793] (tm12_gazebo_moveit) JobEnded: {'identifier': 'tm12_gazebo_moveit', 'rc': 2}
+[7.981032] (-) EventReactorShutdown: {}

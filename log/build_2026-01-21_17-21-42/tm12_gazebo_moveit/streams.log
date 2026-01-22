@@ -1,0 +1,24 @@
+[0.007s] Invoking command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target tm12_pick_and_place[0m
+[0.045s] [ 25%] [32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o[0m
+[0.055s] [ 50%] [32mBuilding CXX object CMakeFiles/tm12_pick_and_place.dir/src/tm12_pick_and_place.cpp.o[0m
+[1.289s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:[m[K In member function ‘[01m[Kvirtual controller_interface::return_type arm_controllers::JointPositionExampleController::update(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[1.289s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:57:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _time_from_start_type = struct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kseconds[m[K’
+[1.289s]    57 |       if (trajectory_points_[i].time_from_start.[01;31m[Kseconds[m[K() <= elapsed) {
+[1.289s]       |                                                 [01;31m[K^~~~~~~[m[K
+[1.289s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:70:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _time_from_start_type = struct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kseconds[m[K’
+[1.289s]    70 |         double t1 = p1.time_from_start.[01;31m[Kseconds[m[K();
+[1.289s]       |                                        [01;31m[K^~~~~~~[m[K
+[1.289s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:71:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _time_from_start_type = struct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kseconds[m[K’
+[1.289s]    71 |         double t2 = p2.time_from_start.[01;31m[Kseconds[m[K();
+[1.289s]       |                                        [01;31m[K^~~~~~~[m[K
+[1.289s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:87:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing _time_from_start_type = struct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct builtin_interfaces::msg::Duration_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kseconds[m[K’
+[1.289s]    87 |           elapsed >= trajectory_points_.back().time_from_start.[01;31m[Kseconds[m[K()) {
+[1.289s]       |                                                                [01;31m[K^~~~~~~[m[K
+[2.945s] gmake[2]: *** [CMakeFiles/joint_position_example_controller.dir/build.make:76: CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o] 오류 1
+[2.945s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/joint_position_example_controller.dir/all] 오류 2
+[2.945s] gmake[1]: *** 끝나지 않은 작업을 기다리고 있습니다....
+[6.952s] [ 75%] [32m[1mLinking CXX executable tm12_pick_and_place[0m
+[7.311s] [ 75%] Built target tm12_pick_and_place
+[7.312s] gmake: *** [Makefile:146: all] 오류 2
+[7.314s] Invoked command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24

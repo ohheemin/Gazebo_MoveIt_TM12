@@ -1,0 +1,3 @@
+<library path="joint_position_example_controller">
+  <class name="arm_controllers/JointPositionExampleController" type="arm_controllers::JointPositionExampleController" base_class_type="controller_interface::ControllerInterface"/>
+</library>

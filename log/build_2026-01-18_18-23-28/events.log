@@ -1,0 +1,95 @@
+[0.000000] (-) TimerEvent: {}
+[0.000272] (tm12_gazebo_moveit) JobQueued: {'identifier': 'tm12_gazebo_moveit', 'dependencies': OrderedDict()}
+[0.000300] (tm12_gazebo_moveit) JobStarted: {'identifier': 'tm12_gazebo_moveit'}
+[0.004290] (tm12_gazebo_moveit) JobProgress: {'identifier': 'tm12_gazebo_moveit', 'progress': 'cmake'}
+[0.004686] (tm12_gazebo_moveit) JobProgress: {'identifier': 'tm12_gazebo_moveit', 'progress': 'build'}
+[0.005146] (tm12_gazebo_moveit) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit', '--', '-j24', '-l24'], 'cwd': '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ko:en'), ('USER', 'ohheemin'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('HOME', '/home/ohheemin'), ('OLDPWD', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/include'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1736'), ('SYSTEMD_EXEC_PID', '1985'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '1917954'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ohheemin'), ('IGN_GAZEBO_MODEL_PATH', '/opt/ros/humble/share'), ('JOURNAL_STREAM', '8:30888'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ohheemin'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/opt/ros/humble/share'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/air:@/tmp/.ICE-unix/1962,unix/air:/tmp/.ICE-unix/1962'), ('INVOCATION_ID', '4da8e8ba2e864c4397c765d7bdbba6f4'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:c1d415a5-1b83-4ef9-8cf4-8bdfeba81476'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/opt/ros/humble/share'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/opt/ros/humble/share'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', ':/usr/lib/x86_64-linux-gnu/cmake:/opt/ros/humble')]), 'shell': False}
+[0.021951] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) in CMakeLists.txt:\n'}
+[0.022006] (tm12_gazebo_moveit) StderrLine: {'line': b'  No project() command is present.  The top-level CMakeLists.txt file must\n'}
+[0.022034] (tm12_gazebo_moveit) StderrLine: {'line': b'  contain a literal, direct call to the project() command.  Add a line of\n'}
+[0.022055] (tm12_gazebo_moveit) StderrLine: {'line': b'  code such as\n'}
+[0.022075] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.022095] (tm12_gazebo_moveit) StderrLine: {'line': b'    project(ProjectName)\n'}
+[0.022115] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.022134] (tm12_gazebo_moveit) StderrLine: {'line': b'  near the top of the file, but after cmake_minimum_required().\n'}
+[0.022157] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.022176] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMake is pretending there is a "project(Project)" command on the first\n'}
+[0.022196] (tm12_gazebo_moveit) StderrLine: {'line': b'  line.\n'}
+[0.022214] (tm12_gazebo_moveit) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.022234] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[0m\n'}
+[0.024687] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.089216] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.089412] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_core/cmake/core/normalize_path.cmake:52 (while):\n'}
+[0.089460] (tm12_gazebo_moveit) StderrLine: {'line': b'  had incorrect arguments:\n'}
+[0.089491] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.089519] (tm12_gazebo_moveit) StderrLine: {'line': b'    "TRUE"\n'}
+[0.089545] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.089570] (tm12_gazebo_moveit) StderrLine: {'line': b'  An argument named "TRUE" appears in a conditional statement.  Policy\n'}
+[0.089596] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMP0012 is not set: if() recognizes numbers and boolean constants.  Run\n'}
+[0.089621] (tm12_gazebo_moveit) StderrLine: {'line': b'  "cmake --help-policy CMP0012" for policy details.  Use the cmake_policy\n'}
+[0.089645] (tm12_gazebo_moveit) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[0.089669] (tm12_gazebo_moveit) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.089693] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/normalize_path.cmake:34 (_normalize_path__collapse_redundant)\n'}
+[0.089724] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/ament_cmake_export_include_directories-extras.cmake:13 (normalize_path)\n'}
+[0.089748] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)\n'}
+[0.089772] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMakeLists.txt:2 (find_package)\n'}
+[0.089795] (tm12_gazebo_moveit) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.089819] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[0m\n'}
+[0.089842] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_core/cmake/core/normalize_path.cmake:72 (while):\n'}
+[0.089866] (tm12_gazebo_moveit) StderrLine: {'line': b'  had incorrect arguments:\n'}
+[0.089890] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.089914] (tm12_gazebo_moveit) StderrLine: {'line': b'    "TRUE"\n'}
+[0.089939] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.089962] (tm12_gazebo_moveit) StderrLine: {'line': b'  An argument named "TRUE" appears in a conditional statement.  Policy\n'}
+[0.089986] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMP0012 is not set: if() recognizes numbers and boolean constants.  Run\n'}
+[0.090019] (tm12_gazebo_moveit) StderrLine: {'line': b'  "cmake --help-policy CMP0012" for policy details.  Use the cmake_policy\n'}
+[0.090043] (tm12_gazebo_moveit) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[0.090067] (tm12_gazebo_moveit) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.090090] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/normalize_path.cmake:35 (_normalize_path__collapse_uplevel_reference)\n'}
+[0.090113] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/ament_cmake_export_include_directories-extras.cmake:13 (normalize_path)\n'}
+[0.090137] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)\n'}
+[0.090161] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMakeLists.txt:2 (find_package)\n'}
+[0.090184] (tm12_gazebo_moveit) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.090207] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[0m\n'}
+[0.090927] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_core/cmake/core/list_append_unique.cmake:30 (if):\n'}
+[0.090951] (tm12_gazebo_moveit) StderrLine: {'line': b'  Policy CMP0057 is not set: Support new IN_LIST if() operator.  Run "cmake\n'}
+[0.091001] (tm12_gazebo_moveit) StderrLine: {'line': b'  --help-policy CMP0057" for policy details.  Use the cmake_policy command to\n'}
+[0.091023] (tm12_gazebo_moveit) StderrLine: {'line': b'  set the policy and suppress this warning.\n'}
+[0.091042] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091062] (tm12_gazebo_moveit) StderrLine: {'line': b'  IN_LIST will be interpreted as an operator when the policy is set to NEW.\n'}
+[0.091081] (tm12_gazebo_moveit) StderrLine: {'line': b'  Since the policy is not set the OLD behavior will be used.\n'}
+[0.091100] (tm12_gazebo_moveit) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.091118] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:34 (list_append_unique)\n'}
+[0.091137] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)\n'}
+[0.091156] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMakeLists.txt:2 (find_package)\n'}
+[0.091174] (tm12_gazebo_moveit) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.091193] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[0m\n'}
+[0.091214] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/list_append_unique.cmake:30 (if):\n'}
+[0.091233] (tm12_gazebo_moveit) StderrLine: {'line': b'  if given arguments:\n'}
+[0.091252] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091270] (tm12_gazebo_moveit) StderrLine: {'line': b'    "NOT" "element" "IN_LIST" "rclcpp_INCLUDE_DIRS"\n'}
+[0.091291] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091310] (tm12_gazebo_moveit) StderrLine: {'line': b'  Unknown arguments specified\n'}
+[0.091328] (tm12_gazebo_moveit) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.091347] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:34 (list_append_unique)\n'}
+[0.091366] (tm12_gazebo_moveit) StderrLine: {'line': b'  /opt/ros/humble/share/rclcpp/cmake/rclcppConfig.cmake:41 (include)\n'}
+[0.091385] (tm12_gazebo_moveit) StderrLine: {'line': b'  CMakeLists.txt:2 (find_package)\n'}
+[0.091404] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091422] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[0m\n'}
+[0.091441] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[31mCMake Error in CMakeLists.txt:\n'}
+[0.091459] (tm12_gazebo_moveit) StderrLine: {'line': b'  No cmake_minimum_required command is present.  A line of code such as\n'}
+[0.091478] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091496] (tm12_gazebo_moveit) StderrLine: {'line': b'    cmake_minimum_required(VERSION 3.22)\n'}
+[0.091515] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091534] (tm12_gazebo_moveit) StderrLine: {'line': b'  should be added at the top of the file.  The version specified may be lower\n'}
+[0.091557] (tm12_gazebo_moveit) StderrLine: {'line': b'  if you wish to support older CMake versions for this project.  For more\n'}
+[0.091576] (tm12_gazebo_moveit) StderrLine: {'line': b'  information run "cmake --help-policy CMP0000".\n'}
+[0.091595] (tm12_gazebo_moveit) StderrLine: {'line': b'\n'}
+[0.091613] (tm12_gazebo_moveit) StderrLine: {'line': b'\x1b[0m\n'}
+[0.091632] (tm12_gazebo_moveit) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.091653] (tm12_gazebo_moveit) StdoutLine: {'line': b'See also "/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit/CMakeFiles/CMakeOutput.log".\n'}
+[0.092828] (tm12_gazebo_moveit) StderrLine: {'line': b'gmake: *** [Makefile:308: cmake_check_build_system] \xec\x98\xa4\xeb\xa5\x98 1\n'}
+[0.094699] (tm12_gazebo_moveit) CommandEnded: {'returncode': 2}
+[0.098655] (tm12_gazebo_moveit) JobEnded: {'identifier': 'tm12_gazebo_moveit', 'rc': 2}
+[0.099597] (-) TimerEvent: {}
+[0.108842] (-) EventReactorShutdown: {}

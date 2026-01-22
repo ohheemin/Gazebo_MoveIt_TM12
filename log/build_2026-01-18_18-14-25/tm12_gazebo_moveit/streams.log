@@ -1,0 +1,37 @@
+[0.007s] Invoking command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24
+[0.025s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.089s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.105s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.106s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.109s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.114s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.120s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.135s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.135s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.204s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.227s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[0.233s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[0.308s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[0.319s] -- Found parameter_traits: 0.5.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[0.322s] -- Found rclcpp_lifecycle: 16.0.15 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.332s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[0.353s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[0.367s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.423s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[0.438s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[0.447s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[0.493s] -- Configuring done
+[0.512s] -- Generating done
+[0.518s] -- Build files have been written to: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit
+[0.539s] [35m[1mConsolidate compiler generated dependencies of target tm12_pick_and_place[0m
+[0.545s] [ 25%] [32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o[0m
+[0.552s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Ktm12_gazebo_moveit/joint_position_example_controller.hpp: 그런 파일이나 디렉터리가 없습니다
+[0.552s]     4 | #include [01;31m[K<tm12_gazebo_moveit/joint_position_example_controller.hpp>[m[K
+[0.552s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.552s] compilation terminated.
+[0.552s] gmake[2]: *** [CMakeFiles/joint_position_example_controller.dir/build.make:76: CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o] 오류 1
+[0.553s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/joint_position_example_controller.dir/all] 오류 2
+[0.553s] gmake[1]: *** 끝나지 않은 작업을 기다리고 있습니다....
+[0.555s] [ 75%] Built target tm12_pick_and_place
+[0.556s] gmake: *** [Makefile:146: all] 오류 2
+[0.558s] Invoked command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24

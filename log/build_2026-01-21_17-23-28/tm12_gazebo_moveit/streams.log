@@ -1,0 +1,118 @@
+[0.007s] Invoking command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target joint_position_example_controller[0m
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target tm12_pick_and_place[0m
+[0.050s] [ 25%] [32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o[0m
+[0.055s] [ 75%] Built target tm12_pick_and_place
+[5.310s] [100%] [32m[1mLinking CXX shared library libjoint_position_example_controller.so[0m
+[5.619s] [100%] Built target joint_position_example_controller
+[5.630s] Invoked command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24
+[5.636s] Invoking command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit
+[5.641s] -- Install configuration: ""
+[5.641s] -- Installing: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/lib/tm12_gazebo_moveit/tm12_pick_and_place
+[5.646s] -- Set runtime path of "/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/lib/tm12_gazebo_moveit/tm12_pick_and_place" to ""
+[5.646s] -- Installing: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/lib/tm12_gazebo_moveit/libjoint_position_example_controller.so
+[5.656s] -- Set runtime path of "/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/lib/tm12_gazebo_moveit/libjoint_position_example_controller.so" to ""
+[5.656s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config
+[5.656s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/joint_limits.yaml
+[5.656s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/moveit_cpp.yaml
+[5.656s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/ompl_planning.yaml
+[5.656s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/controllers.yaml
+[5.656s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/tm12.srdf
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/trajopt_planning.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/ros2_controllers.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/tm12.ros2_control.xacro
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/ros2_controllers.yaml.backup
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/stomp_planning.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/sensors_3d.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/initial_positions.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/moveit.rviz
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/moveit_controllers.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/tm12.urdf.xacro
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/tm_config/kinematics.yaml
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/rviz2
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/rviz2/tm12_moveit_config.rviz
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/launch
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/launch/tm12.launch.py
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/urdf
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/urdf/tm12.urdf
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro/macro.transmission.xacro
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro/macro.tm12.urdf.xacro
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro/macro.inertial.xacro
+[5.657s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro/macro.gazebo.xacro
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro/macro.materials.xacro
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/xacro/tm12.urdf.xacro
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/collision
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/collision/tm12-base_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/collision/tmr_750w_01_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/collision/tm12-arm2_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/collision/tm12-arm1_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-base.obj
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-arm1.obj
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-base.mtl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-base.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-arm2.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-arm2.obj
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tmr_750w_01.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-arm1.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tmr_750w_01.mtl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tmr_750w_01.obj
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-arm1.mtl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm12/visual/tm12-arm2.mtl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tmr_iox_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tm5-900_arm2_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tmr_100w_01_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tmr_400w_01_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tm5-base_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tmr_100w_02_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tm5-900_arm1_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/collision/tmr_ee_c.stl
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-base.obj
+[5.658s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_iox.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-base.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_100w_02.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_400w_01.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_100w_01.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_100w_02.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_iox.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_iox.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_400w_01.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-900_arm2.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-900_arm1.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_100w_01.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-900_arm1.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-900_arm2.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_ee.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_400w_01.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-base.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_ee.mtl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-900_arm1.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tm5-900_arm2.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_100w_01.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_100w_02.stl
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/meshes/tm5-900/visual/tmr_ee.obj
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/arm_controllers_plugin.xml
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/arm_controllers_plugin.xml
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/ament_index/resource_index/package_run_dependencies/tm12_gazebo_moveit
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/ament_index/resource_index/parent_prefix_path/tm12_gazebo_moveit
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/environment/ament_prefix_path.sh
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/environment/ament_prefix_path.dsv
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/environment/path.sh
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/environment/path.dsv
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/local_setup.bash
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/local_setup.sh
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/local_setup.zsh
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/local_setup.dsv
+[5.659s] -- Installing: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/package.dsv
+[5.659s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/ament_index/resource_index/packages/tm12_gazebo_moveit
+[5.660s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/ament_index/resource_index/controller_interface__pluginlib__plugin/tm12_gazebo_moveit
+[5.660s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/cmake/tm12_gazebo_moveitConfig.cmake
+[5.660s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/cmake/tm12_gazebo_moveitConfig-version.cmake
+[5.660s] -- Up-to-date: /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/install/tm12_gazebo_moveit/share/tm12_gazebo_moveit/package.xml
+[5.660s] Invoked command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit

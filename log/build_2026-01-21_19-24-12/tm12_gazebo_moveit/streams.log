@@ -1,0 +1,15 @@
+[0.007s] Invoking command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target tm12_pick_and_place[0m
+[0.047s] [ 50%] Built target joint_position_example_controller
+[0.055s] [ 75%] [32mBuilding CXX object CMakeFiles/tm12_pick_and_place.dir/src/tm12_pick_and_place.cpp.o[0m
+[2.450s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/tm12_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool MoveItToJointCommand::move_with_joint_target(const Pose&)[m[K’:
+[2.450s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/tm12_pick_and_place.cpp:360:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_state[m[K’ has not been declared
+[2.450s]   360 |         [01;31m[Krobot_state[m[K::RobotStatePtr current_state = move_group_->getCurrentState();
+[2.450s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[2.456s] [01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/tm12_pick_and_place.cpp:362:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+[2.456s]   362 |             [01;31m[Kcurrent_state[m[K->getJointModelGroup("tmr_arm");
+[2.456s]       |             [01;31m[K^~~~~~~~~~~~~[m[K
+[4.759s] gmake[2]: *** [CMakeFiles/tm12_pick_and_place.dir/build.make:76: CMakeFiles/tm12_pick_and_place.dir/src/tm12_pick_and_place.cpp.o] 오류 1
+[4.759s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/tm12_pick_and_place.dir/all] 오류 2
+[4.759s] gmake: *** [Makefile:146: all] 오류 2
+[4.761s] Invoked command in '/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/build/tm12_gazebo_moveit -- -j24 -l24

@@ -1,0 +1,9 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o[0m
+[ 75%] Built target tm12_pick_and_place
+[01m[K/home/ohheemin/gazebo_ws/src/tm12_gazebo_moveit/src/joint_position_example_controller.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Kjoint_position_example_controller.hpp: 그런 파일이나 디렉터리가 없습니다
+    4 | #include [01;31m[K<joint_position_example_controller.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/joint_position_example_controller.dir/build.make:76: CMakeFiles/joint_position_example_controller.dir/src/joint_position_example_controller.cpp.o] 오류 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/joint_position_example_controller.dir/all] 오류 2
+gmake: *** [Makefile:146: all] 오류 2

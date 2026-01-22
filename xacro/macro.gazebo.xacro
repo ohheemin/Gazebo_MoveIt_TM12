@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="tmr_gazebo" params="ns prefix">
+    <gazebo reference="${prefix}link_1">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}link_2">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}link_3">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}link_4">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}link_5">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="${prefix}link_6">
+      <selfCollide>true</selfCollide>
+    </gazebo>
+    
+    <!-- Gripper Gazebo 설정 추가 -->
+    <gazebo reference="${prefix}gripper_link">
+      <selfCollide>true</selfCollide>
+      <material>Gazebo/DarkGrey</material>
+      <mu1>0.9</mu1>
+      <mu2>0.9</mu2>
+    </gazebo>
+    
+    <gazebo>
+      <plugin filename="ign_ros2_control-system" 
+              name="ign_ros2_control::IgnitionROS2ControlPlugin">
+        <parameters>$(find tm12_gazebo_moveit)/tm_config/ros2_controllers.yaml</parameters>
+      </plugin>
+    </gazebo>
+    
+  </xacro:macro>
+</robot>
