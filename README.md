@@ -22,7 +22,6 @@ tm12 (with surface gripper) pick and place sequence
 - Add Surface Gripper (To Grasp Objects)
 
 - Jump to other positions (each joint)
-- 
 
 # Origin
 
