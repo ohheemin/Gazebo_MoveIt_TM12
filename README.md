@@ -23,6 +23,8 @@ tm12 (with surface gripper) pick and place sequence
 
 - Jump to other positions (each joint)
 
+- Damping, Stiffness of Joint 1~6 (in macro files)
+
 # Origin
 
 tm12 urdf xacro / tm12 launch py + not dae
