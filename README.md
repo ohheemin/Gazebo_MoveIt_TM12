@@ -28,3 +28,21 @@ tm12 (with surface gripper) pick and place sequence
 # Origin
 
 tm12 urdf xacro / tm12 launch py + not dae
+
+# Conveyor in GBTP
+
+기존에 ratio 1.0이었을 때 - manipulator가 object에 접근하지 않았을 때 rtf는 30, 접근했을 때 rtf 17-20
+
+ratio 0.0001로 decimate했을 때 - manipulator가 object에 접근하지 않았을 때 rtf 70-75, 접근했을 때 47-50
+
+libignition-gazebo-track-controller-system.so--------------> 이 둘은
+
+libignition-gazebo-tracked-vehicle-system.so---------------> 궤도 차량용 플러그인
+
+libignition-gazebo-joint-controller-system.so--------------> 이 둘은
+
+libignition-gazebo-joint-position-controller-system.so-----> 조인트 관련 플러그인
+
+
+
+
