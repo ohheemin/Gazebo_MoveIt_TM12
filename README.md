@@ -45,6 +45,8 @@ libignition-gazebo-joint-position-controller-system.so-----> 조인트 관련 �
 
 joint position 선형으로 나오지 않을 시, 런치 파일에서 ros gz bridge /clock 체크할 것
 
+++ dynamic gripper plugin 추후에 추가
+
 
 
 
