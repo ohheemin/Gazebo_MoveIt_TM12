@@ -1,6 +1,6 @@
 # Gazebo_MoveIt_TM12
 <img width="204" height="270" alt="스크린샷 2026-01-23 15-44-56" src="https://github.com/user-attachments/assets/3157074b-e30a-4971-9310-5ce44e94ecf2" />
-<img width="600" height="300" alt="스크린샷 2026-02-10 13-51-47" src="https://github.com/user-attachments/assets/e70eb0e9-08cf-4f24-b5f9-0dcdde3d0685" />
+<img width="600" height="270" alt="스크린샷 2026-02-10 13-51-47" src="https://github.com/user-attachments/assets/e70eb0e9-08cf-4f24-b5f9-0dcdde3d0685" />
 
 tm12 (with surface gripper) pick and place sequence
 
