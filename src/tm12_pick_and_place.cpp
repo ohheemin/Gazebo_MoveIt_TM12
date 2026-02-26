@@ -10,12 +10,14 @@
 #include <moveit_msgs/msg/robot_trajectory.hpp>
 #include <std_msgs/msg/float64.hpp>
 #include <std_msgs/msg/bool.hpp>
+#include <std_msgs/msg/empty.hpp>
 
 #include <thread>
 #include <chrono>
 #include <vector>
 #include <cmath>
 #include <mutex>
+#include <cstdlib>  
 
 using namespace std::chrono_literals;
 
@@ -29,10 +31,10 @@ enum class J1Direction
 enum class SequenceState
 {
     IDLE,
-    PICKING,              // pick으로 내려가서 잡는 중
-    PICK_TO_PLACE,        // pick에서 place로 이동 중 
-    PLACING,              // place로 내려가서 놓는 중
-    PLACE_RETURNING,      // place에서 복귀 중
+    PICKING,
+    PICK_TO_PLACE,
+    PLACING,
+    PLACE_RETURNING,
     COMPLETED
 };
 
@@ -41,8 +43,8 @@ class MoveItToJointCommand : public rclcpp::Node
 public:
     MoveItToJointCommand() : Node("moveit_to_jointcommand")
     {
-        joint_traj_pub_ = this->create_publisher<trajectory_msgs::msg::JointTrajectory>(
-            "/joint_command_trajectory", 10);
+        joint_pub_ = this->create_publisher<sensor_msgs::msg::JointState>(
+            "/joint_command", 10);
 
         pickplace_pub_ = this->create_publisher<std_msgs::msg::Float64>(
             "/pickandplace", 10);
@@ -54,17 +56,21 @@ public:
             "/finish", 10);
 
         joint_sub_ = this->create_subscription<sensor_msgs::msg::JointState>(
-            "/joint_states", 10,
+            "/joint_states",
+            10,
             std::bind(&MoveItToJointCommand::jointStateCallback, this, std::placeholders::_1));
 
         pickplace_timer_ = this->create_wall_timer(
-            0.0001ms, std::bind(&MoveItToJointCommand::publishJoint1, this));
+            60ms, std::bind(&MoveItToJointCommand::publishJoint1, this));
 
         finish_timer_ = this->create_wall_timer(
-            100ms, std::bind(&MoveItToJointCommand::publishFinish, this));
+            60ms, std::bind(&MoveItToJointCommand::publishFinish, this));
+
+        cmd_timer_ = this->create_wall_timer(
+            60ms, std::bind(&MoveItToJointCommand::periodicCommandPublish, this));
 
         RCLCPP_INFO(this->get_logger(),
-            "MoveIt Bridge Node Started");
+            "MoveIt Bridge Node Started. Subscribing to /joint_states");
     }
 
     void initialize()
@@ -81,45 +87,59 @@ public:
 
         waitForFirstJointState();
 
+        {
+            std::lock_guard<std::mutex> lock(joint_mutex_);
+            std::lock_guard<std::mutex> cmd_lock(command_mutex_);
+            last_commanded_joints_ = current_joints_;
+            has_command_ = true;
+        }
+
+        RCLCPP_INFO(this->get_logger(), "Initializing: Clearing Gripper State...");
+        releaseObject(); 
+        std::this_thread::sleep_for(1s);
+
         tf2::Quaternion q;
-        q.setRPY(M_PI, 0, M_PI);
+        q.setRPY(M_PI, 0, 0);
 
         geometry_msgs::msg::Pose pick_pose1;
-        pick_pose1.position.x = -0.235;
-        pick_pose1.position.y = 0.5;
-        pick_pose1.position.z = 0.2;
+        pick_pose1.position.x = 0.3+0.65;
+        pick_pose1.position.y = -0.7+4.7 ;
+        pick_pose1.position.z = 0.275+0.63;
         pick_pose1.orientation = tf2::toMsg(q);
 
         geometry_msgs::msg::Pose pick_approach1 = pick_pose1;
-        pick_approach1.position.z += 0.1;
+        pick_approach1.position.z += 0.3;
+
+        //place poses 일 때 항상 밑 방향으로 보는 constraint 적용 시 경로계산 실패-------------->>> 다시 체크
 
         geometry_msgs::msg::Pose place_pose1;
-        place_pose1.position.x = 0.0;
-        place_pose1.position.y = -0.7;
-        place_pose1.position.z = 0.2;
+        place_pose1.position.x = 0.0 + 0.6;
+        place_pose1.position.y = 0.5 + 4.8;
+        place_pose1.position.z = 0.43 + 0.63; //0.4+0.63+0.15
         place_pose1.orientation = tf2::toMsg(q);
 
         geometry_msgs::msg::Pose place_approach1 = place_pose1;
         place_approach1.position.z += 0.1;
 
         geometry_msgs::msg::Pose place_pose2;
-        place_pose2.position.x = -0.235;
-        place_pose2.position.y = -0.7;
-        place_pose2.position.z = 0.2;
+        place_pose2.position.x = 0.235 + 0.6;
+        place_pose2.position.y = 0.5 + 4.8;
+        place_pose2.position.z = 0.43 + 0.63; //0.4+0.63 
         place_pose2.orientation = tf2::toMsg(q);
         geometry_msgs::msg::Pose place_approach2 = place_pose2;
         place_approach2.position.z += 0.1;
 
         geometry_msgs::msg::Pose place_pose3;
-        place_pose3.position.x = -0.555;
-        place_pose3.position.y = -0.7;
-        place_pose3.position.z = 0.2;
+        place_pose3.position.x = 0.555 + 0.6;
+        place_pose3.position.y = 0.5 + 4.8;
+        place_pose3.position.z = 0.43 + 0.63; //0.4+0.63
         place_pose3.orientation = tf2::toMsg(q);
         geometry_msgs::msg::Pose place_approach3 = place_pose3;
         place_approach3.position.z += 0.1;
 
         RCLCPP_WARN(this->get_logger(), "Pick Place Sequence Started");
 
+        // CYCLE 1
         RCLCPP_INFO(this->get_logger(), "Starting: PICK 1");
         current_sequence_state_ = SequenceState::PICK_TO_PLACE;
         run_sequence(pick_approach1, J1Direction::ANY);
@@ -131,7 +151,13 @@ public:
             RCLCPP_FATAL(this->get_logger(), "Failed to move to pick_pose1");
             return;
         }
-        std::this_thread::sleep_for(7s);
+        std::this_thread::sleep_for(3s);
+        
+        // Pick 전에 혹시 모를 연결 해제
+        releaseObject(); 
+        std::this_thread::sleep_for(500ms);
+        gripObject();
+        std::this_thread::sleep_for(4s);
 
         current_sequence_state_ = SequenceState::PICK_TO_PLACE;
         if (!move_to_pose_smart(pick_approach1))
@@ -151,7 +177,9 @@ public:
             RCLCPP_FATAL(this->get_logger(), "Failed to move to place_pose1");
             return;
         }
-        std::this_thread::sleep_for(7s);
+        std::this_thread::sleep_for(3s);
+        releaseObject();
+        std::this_thread::sleep_for(4s);
 
         current_sequence_state_ = SequenceState::PLACE_RETURNING;
         if (!move_to_pose_smart(place_approach1))
@@ -161,6 +189,7 @@ public:
         }
         std::this_thread::sleep_for(7s);
 
+        // --- CYCLE 2 ---
         RCLCPP_INFO(this->get_logger(), "Starting: PICK 2");
         run_sequence(pick_approach1, J1Direction::ANY);
         std::this_thread::sleep_for(7s);
@@ -171,7 +200,13 @@ public:
             RCLCPP_FATAL(this->get_logger(), "Failed to move to pick_pose1");
             return;
         }
-        std::this_thread::sleep_for(7s);
+        std::this_thread::sleep_for(3s);
+        
+        // Pick 전에 혹시 모를 연결 해제
+        // releaseObject(); 
+        std::this_thread::sleep_for(0s);
+        gripObject();
+        std::this_thread::sleep_for(4s);
 
         current_sequence_state_ = SequenceState::PICK_TO_PLACE;
         if (!move_to_pose_smart(pick_approach1))
@@ -180,7 +215,7 @@ public:
             return;
         }
         std::this_thread::sleep_for(7s);
-        
+
         RCLCPP_INFO(this->get_logger(), "Starting: PLACE 2");
         run_sequence(place_approach2, J1Direction::ANY);
         std::this_thread::sleep_for(7s);
@@ -191,7 +226,9 @@ public:
             RCLCPP_FATAL(this->get_logger(), "Failed to move to place_pose2");
             return;
         }
-        std::this_thread::sleep_for(7s);
+        std::this_thread::sleep_for(3s);
+        releaseObject();
+        std::this_thread::sleep_for(4s);
 
         current_sequence_state_ = SequenceState::PLACE_RETURNING;
         if (!move_to_pose_smart(place_approach2))
@@ -201,6 +238,7 @@ public:
         }
         std::this_thread::sleep_for(7s);
 
+        // --- CYCLE 3 ---
         RCLCPP_INFO(this->get_logger(), "Starting: PICK 3");
         run_sequence(pick_approach1, J1Direction::ANY);
         std::this_thread::sleep_for(7s);
@@ -211,7 +249,13 @@ public:
             RCLCPP_FATAL(this->get_logger(), "Failed to move to pick_pose1");
             return;
         }
-        std::this_thread::sleep_for(7s);
+        std::this_thread::sleep_for(3s);
+        
+        // Pick 전에 혹시 모를 연결 해제
+        releaseObject(); 
+        std::this_thread::sleep_for(500ms);
+        gripObject();
+        std::this_thread::sleep_for(4s);
 
         current_sequence_state_ = SequenceState::PICK_TO_PLACE;
         if (!move_to_pose_smart(pick_approach1))
@@ -231,7 +275,9 @@ public:
             RCLCPP_FATAL(this->get_logger(), "Failed to move to place_pose3");
             return;
         }
-        std::this_thread::sleep_for(7s);
+        std::this_thread::sleep_for(3s);
+        releaseObject();
+        std::this_thread::sleep_for(4s);
 
         current_sequence_state_ = SequenceState::PLACE_RETURNING;
         if (!move_to_pose_smart(place_approach3))
@@ -243,7 +289,7 @@ public:
 
         current_sequence_state_ = SequenceState::COMPLETED;
         RCLCPP_WARN(this->get_logger(), "All Pick & Place Completed");
-
+        
         RCLCPP_INFO(this->get_logger(), "Sending all joints to zero position");
         std::vector<double> zero_joints = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
         publish_joint_command(zero_joints);
@@ -253,19 +299,47 @@ public:
 
 private:
     std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group_;
-    rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr joint_traj_pub_;  // 변경!
+    rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pickplace_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr placepick_pub_;
     rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr finish_pub_;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub_;
     rclcpp::TimerBase::SharedPtr pickplace_timer_;
     rclcpp::TimerBase::SharedPtr finish_timer_;
+    rclcpp::TimerBase::SharedPtr cmd_timer_;
 
     std::mutex joint_mutex_;
+    std::mutex command_mutex_;
     std::vector<double> current_joints_;
+    std::vector<double> last_commanded_joints_; 
     bool have_joint_state_ = false;
+    bool has_command_ = false; 
     bool sequence_finished_ = false;
     SequenceState current_sequence_state_ = SequenceState::IDLE;
+
+    void gripObject()
+    {
+        RCLCPP_INFO(this->get_logger(), "Gripper: ATTACHING object via ign topic");
+
+        std::this_thread::sleep_for(100ms);
+        int result = system("ign topic -t /tm12_gripper/attach -m ignition.msgs.Empty -p \"\"");
+        if (result != 0)
+        {
+            RCLCPP_WARN(this->get_logger(), "Failed to execute attach command");
+        }
+    }
+
+    void releaseObject()
+    {
+        RCLCPP_INFO(this->get_logger(), "Gripper: DETACHING object via ign topic");
+        
+        std::this_thread::sleep_for(100ms);
+        int result = system("ign topic -t /tm12_gripper/detach -m ignition.msgs.Empty -p \"\"");
+        if (result != 0)
+        {
+            RCLCPP_WARN(this->get_logger(), "Failed to execute detach command");
+        }
+    }
 
     void jointStateCallback(const sensor_msgs::msg::JointState::SharedPtr msg)
     {
@@ -275,6 +349,22 @@ private:
             current_joints_ = msg->position;
             have_joint_state_ = true;
         }
+    }
+
+    void periodicCommandPublish()
+    {
+        std::vector<double> joints_to_pub;
+        {
+            std::lock_guard<std::mutex> lock(command_mutex_);
+            if (!has_command_) return;
+            joints_to_pub = last_commanded_joints_;
+        }
+
+        sensor_msgs::msg::JointState msg;
+        msg.name = {"joint_1","joint_2","joint_3","joint_4","joint_5","joint_6"};
+        msg.position = joints_to_pub;
+        msg.header.stamp = this->now();
+        joint_pub_->publish(msg);
     }
 
     void publishJoint1()
@@ -289,9 +379,9 @@ private:
         if (current_sequence_state_ == SequenceState::PLACING || 
             current_sequence_state_ == SequenceState::PLACE_RETURNING)
         {
-            if ((j1 >= 4.92 && j1 <= 4.94) ||  // Place 1
-                (j1 >= 4.55 && j1 <= 4.70) ||  // Place 2
-                (j1 >= 4.21 && j1 <= 4.23))    // Place 3
+            if ((j1 >= 4.92 && j1 <= 4.94) ||
+                (j1 >= 4.55 && j1 <= 4.70) ||
+                (j1 >= 4.21 && j1 <= 4.23))
             {
                 placepick_pub_->publish(msg);
                 return; 
@@ -328,7 +418,7 @@ private:
         double j3 = joints[2];
         double j4 = joints[3];
         
-        if (j1 < 0.0 || j2 < -0.4 || j3 < 0.0 || j4 > 0.0)
+        if (j1 < -0.1 || j2 < -0.4 || j3 < -0.1 || j4 > 0.1)
         {
             RCLCPP_ERROR(this->get_logger(), 
                 "%sConstraint violation! j1=%.3f (≥0.0), j2=%.3f (≥-0.4), j3=%.3f (≥0.0), j4=%.3f (≤0.0)",
@@ -352,6 +442,7 @@ private:
                 RCLCPP_WARN(this->get_logger(), "Pose planning attempt %d: Planning failed", attempt + 1);
                 continue;
             }
+
             bool valid = true;
             for (size_t i = 0; i < plan.trajectory_.joint_trajectory.points.size(); ++i)
             {
@@ -379,6 +470,7 @@ private:
         RCLCPP_ERROR(this->get_logger(), "Failed to find valid trajectory after 50 attempts");
         return false;
     }
+
     bool move_to_pose_smart(const geometry_msgs::msg::Pose& target)
     {
         move_group_->setStartStateToCurrentState();
@@ -481,17 +573,11 @@ private:
     void playTrajectory(const trajectory_msgs::msg::JointTrajectory& traj)
     {
         RCLCPP_INFO(this->get_logger(), "Executing trajectory with %zu points", traj.points.size());
-
-        trajectory_msgs::msg::JointTrajectory smooth_traj;
-        smooth_traj.joint_names = {"joint_1", "joint_2", "joint_3", "joint_4", "joint_5", "joint_6"};
-        smooth_traj.header.stamp = now();
-        
-        double time_step = 0.05; 
         
         for (size_t i = 0; i < traj.points.size(); ++i)
         {
             auto& p = traj.points[i];
-            
+
             if (!checkJointConstraints(p.positions, "Execution point " + std::to_string(i)))
             {
                 RCLCPP_FATAL(this->get_logger(), 
@@ -500,38 +586,18 @@ private:
                 return;
             }
             
-            trajectory_msgs::msg::JointTrajectoryPoint point;
-            point.positions = p.positions;
-            point.velocities = std::vector<double>(6, 0.0);
-            point.accelerations = std::vector<double>(6, 0.0);
-            point.time_from_start = rclcpp::Duration::from_seconds(time_step * (i + 1));
-            
-            smooth_traj.points.push_back(point);
+            publish_joint_command(p.positions);
+            std::this_thread::sleep_for(60ms);
         }
-
-        joint_traj_pub_->publish(smooth_traj);
-
-        double total_time = time_step * traj.points.size();
-        std::this_thread::sleep_for(std::chrono::duration<double>(total_time + 0.5));
         
         RCLCPP_INFO(this->get_logger(), "Trajectory execution completed successfully");
     }
 
     void publish_joint_command(const std::vector<double>& joints)
     {
-        trajectory_msgs::msg::JointTrajectory traj_msg;
-        traj_msg.joint_names = {"joint_1", "joint_2", "joint_3", "joint_4", "joint_5", "joint_6"};
-        traj_msg.header.stamp = now();
-        
-        trajectory_msgs::msg::JointTrajectoryPoint point;
-        point.positions = joints;
-        point.velocities = std::vector<double>(6, 0.0);
-        point.accelerations = std::vector<double>(6, 0.0);
-        point.time_from_start = rclcpp::Duration::from_seconds(0.05);  
-        
-        traj_msg.points.push_back(point);
-        
-        joint_traj_pub_->publish(traj_msg);
+        std::lock_guard<std::mutex> lock(command_mutex_);
+        last_commanded_joints_ = joints;
+        has_command_ = true;
     }
 };
 

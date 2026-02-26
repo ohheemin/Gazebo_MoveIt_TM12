@@ -5,10 +5,10 @@
   <xacro:arg name="color" default="none" />
   <xacro:arg name="trans_hw_iface" default="hardware_interface/PositionJointInterface" />
   
-  <xacro:include filename="$(find tm12_gazebo_moveit)/xacro/macro.gazebo.xacro" />
-  <xacro:include filename="$(find tm12_gazebo_moveit)/xacro/macro.transmission.xacro" />
-  <xacro:include filename="$(find tm12_gazebo_moveit)/xacro/macro.materials.xacro" />
-  <xacro:include filename="$(find tm12_gazebo_moveit)/xacro/macro.tm12.urdf.xacro" />
+  <xacro:include filename="$(find gazebo_test_bed)/xacro/macro.gazebo.xacro" />
+  <xacro:include filename="$(find gazebo_test_bed)/xacro/macro.transmission.xacro" />
+  <xacro:include filename="$(find gazebo_test_bed)/xacro/macro.materials.xacro" />
+  <xacro:include filename="$(find gazebo_test_bed)/xacro/macro.tm12.urdf.xacro" />
 
   <link name="world">
     <visual>
@@ -40,11 +40,51 @@
   <gazebo reference="world">
     <static>true</static>
   </gazebo>
+
+  <link name="support_block">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.63"/> 
+      </geometry>
+      <material name="BlockGrey">
+        <color rgba="0.3 0.3 0.3 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.2 0.63"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="500.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="16.58" ixy="0.0" ixz="0.0"
+               iyy="16.58" iyz="0.0"
+               izz="10.42"/>
+    </inertial>
+  </link>
+
+  <!-- Gazebo properties for support block -->
+  <gazebo reference="support_block">
+    <static>true</static>
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <!-- Joint to attach support block to world -->
+  <joint name="world_to_support_block" type="fixed">
+    <parent link="world"/>
+    <child link="support_block"/>
+    <origin xyz="0.8 4.6 0.315" rpy="0.0 0.0 3.14159"/>
+  </joint>
   
   <joint name="world_to_base_fixed" type="fixed">
     <parent link="world"/>
     <child link="$(arg prefix)base"/>
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <origin xyz="0.8 4.6 0.63" rpy="0.0 0.0 3.14159"/>
   </joint>
 
   <xacro:tmr_gazebo ns="$(arg ns)" prefix="$(arg prefix)" />

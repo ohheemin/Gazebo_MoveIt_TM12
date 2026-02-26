@@ -1,39 +1,61 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:macro name="tmr_gazebo" params="ns prefix">
-    <gazebo reference="${prefix}link_1">
-      <selfCollide>true</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}link_2">
-      <selfCollide>true</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}link_3">
-      <selfCollide>true</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}link_4">
-      <selfCollide>true</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}link_5">
-      <selfCollide>true</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}link_6">
-      <selfCollide>true</selfCollide>
-    </gazebo>
-    
-    <!-- Gripper Gazebo 설정 추가 -->
+
+  <!--
+    tm12 고정 로봇 전용 gazebo 매크로.
+    mobile_manipulator 는 별도 파일에서 직접 ign_ros2_control 플러그인을 정의하므로
+    이 매크로를 호출하지 않음.
+  -->
+  <xacro:macro name="tmr_gazebo" params="ns prefix robot_namespace:=''">
+
+    <gazebo reference="${prefix}link_1"><selfCollide>true</selfCollide></gazebo>
+    <gazebo reference="${prefix}link_2"><selfCollide>true</selfCollide></gazebo>
+    <gazebo reference="${prefix}link_3"><selfCollide>true</selfCollide></gazebo>
+    <gazebo reference="${prefix}link_4"><selfCollide>true</selfCollide></gazebo>
+    <gazebo reference="${prefix}link_5"><selfCollide>true</selfCollide></gazebo>
+    <gazebo reference="${prefix}link_6"><selfCollide>true</selfCollide></gazebo>
+
     <gazebo reference="${prefix}gripper_link">
       <selfCollide>true</selfCollide>
       <material>Gazebo/DarkGrey</material>
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
     </gazebo>
-    
+
+    <gazebo reference="${prefix}gripper_surface_link">
+      <selfCollide>true</selfCollide>
+      <sensor name="gripper_contact_sensor" type="contact">
+        <contact>
+          <collision>${prefix}gripper_surface_link_collision</collision>
+        </contact>
+        <update_rate>30</update_rate>
+        <always_on>true</always_on>
+        <plugin filename="libignition-gazebo-contact-system.so"
+                name="ignition::gazebo::systems::Contact">
+        </plugin>
+      </sensor>
+    </gazebo>
+
+    <!-- ign_ros2_control 플러그인 → /controller_manager (tm12 전용) -->
     <gazebo>
-      <plugin filename="ign_ros2_control-system" 
+      <plugin filename="ign_ros2_control-system"
               name="ign_ros2_control::IgnitionROS2ControlPlugin">
-        <parameters>$(find tm12_gazebo_moveit)/tm_config/ros2_controllers.yaml</parameters>
+        <parameters>$(find gazebo_test_bed)/tm_config/ros2_controllers.yaml</parameters>
       </plugin>
     </gazebo>
-    
+
+    <!-- Dynamic Gripper Plugin -->
+    <gazebo>
+      <plugin filename="tm12_gazebo_moveit/libdynamic_gripper_plugin.so"
+              name="dynamic_gripper::DynamicGripperPlugin">
+        <parent_link>${prefix}gripper_surface_link</parent_link>
+        <contact_sensor_topic>/world/empty/model/tm12/link/gripper_surface_link/sensor/gripper_contact_sensor/contact</contact_sensor_topic>
+        <attach_topic>/tm12_gripper/attach</attach_topic>
+        <detach_topic>/tm12_gripper/detach</detach_topic>
+        <state_topic>/tm12_gripper/state</state_topic>
+        <attach_distance>0.01</attach_distance>
+      </plugin>
+    </gazebo>
+
   </xacro:macro>
 </robot>

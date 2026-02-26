@@ -1,0 +1,607 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="pallet_amr">
+  
+  <link name="base_link">
+  <inertial>
+      <origin xyz="-0.011362 -4.2533E-05 0.1929" rpy="0 0 0" />
+      <mass value="39.713" />
+      <inertia ixx="0.886" ixy="-0.000271835" ixz="-2.8373E-05"
+              iyy="1.3696" iyz="0.00009206" izz="1.70325" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/base/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.925490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.20" rpy="0 0 0" />
+      <geometry>
+        <box size="0.60 0.32 0.15" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="upper_Link">
+  <inertial>
+    <origin xyz="-8.906531742176793e-05 -9.967567934063133e-09 0.04343908659883667" rpy="0 0 0" />
+    <mass value="42.40379539952767" />
+    <inertia ixx="2.768532191340667" ixy="-7.3168880844423e-07" ixz="-7.540600673085133e-06"
+            iyy="4.79188823082035" iyz="8.091853689853833e-08" izz="7.09446575858375" />
+  </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/upper/upper_Link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/upper/upper_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="upper_joint" type="fixed">
+    <origin xyz="-0.015189 0 0.38256" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="upper_Link" />
+  </joint>
+
+  
+  <link name="control_Link">
+    <inertial>
+      <origin
+        xyz="-0.369333566998196 0.00141093575416524 -0.349182398611436"
+        rpy="0 0 0" />
+      <mass
+        value="0.420849252973467" />
+      <inertia
+        ixx="0.000918325122027237"
+        ixy="1.40329557826722E-07"
+        ixz="5.17111860552687E-07"
+        iyy="0.000258354800112382"
+        iyz="-2.56380411024392E-07"
+        izz="0.000733000766338133" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/control/control_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/control/control_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="control_joint"
+    type="fixed">
+    <origin
+      xyz="-0.19699 -0.000381 0.46794"
+      rpy="0 0 0" />
+    <parent
+      link="upper_Link" />
+    <child
+      link="control_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  <link
+    name="pallet_Link">
+    <inertial>
+      <origin
+        xyz="0.0499988822980956 0.200000855577175 -0.00962525670211267"
+        rpy="0 0 0" />
+      <mass
+        value="14.4096676314967" />
+      <inertia
+        ixx="1.03985775162232"
+        ixy="2.524159247993585E-05"
+        ixz="4.73712839888941E-07"
+        iyy="1.63747936847568"
+        iyz="-3.85080736243151E-07"
+        izz="2.629809904192765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/pallet/pallet_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ohheemin/ros2_ws/src/gazebo_test_bed/urdf/pallet_amr/meshes/pallet/pallet_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pallet_joint"
+    type="fixed">
+    <origin
+      xyz="0.14699 -0.19962 -0.13294"
+      rpy="0 0 0" />
+    <parent
+      link="control_Link" />
+    <child
+      link="pallet_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link name="wheel_left">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia 
+        ixx="0.00372" ixy="0" ixz="0"
+        iyy="0.00704" iyz="0"
+        izz="0.00372"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.09684" length="0.04"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09684" length="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wheel_left_joint" type="continuous">
+    <origin xyz="0.0 0.1991 0.09684" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_left" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="wheel_right">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.5"/>
+      <inertia 
+        ixx="0.00372" ixy="0" ixz="0"
+        iyy="0.00704" iyz="0"
+        izz="0.00372"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.09684" length="0.04"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.09684" length="0.04" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wheel_right_joint" type="continuous">
+    <origin xyz="0.0 -0.1991 0.09684" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="wheel_right" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <joint name="caster_front_left_joint" type="fixed">
+    <origin xyz="0.2182 0.1238 0.011" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="caster_front_left"/>
+  </joint>
+
+  <link name="caster_front_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.3 0.3 0.3 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.005"/>
+      <inertia ixx="2.0e-7" ixy="0" ixz="0"
+              iyy="5.42e-7" iyz="0"
+              izz="4.09e-7"/>
+    </inertial>
+  </link>
+
+  <joint name="caster_front_right_joint" type="fixed">
+    <origin xyz="0.2182 -0.1238 0.011" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="caster_front_right"/>
+  </joint>
+
+  <link name="caster_front_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.3 0.3 0.3 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.005"/>
+      <inertia ixx="2.0e-7" ixy="0" ixz="0"
+              iyy="5.42e-7" iyz="0"
+              izz="4.09e-7"/>
+    </inertial>
+  </link>
+
+  <joint name="caster_back_left_joint" type="fixed">
+    <origin xyz="-0.2182 0.1725 0.011" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="caster_back_left"/>
+  </joint>
+
+  <link name="caster_back_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.3 0.3 0.3 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.005"/>
+      <inertia ixx="2.0e-7" ixy="0" ixz="0"
+              iyy="5.42e-7" iyz="0"
+              izz="4.09e-7"/>
+    </inertial>
+  </link>
+
+  <joint name="caster_back_right_joint" type="fixed">
+    <origin xyz="-0.2182 -0.1725 0.011" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="caster_back_right"/>
+  </joint>
+
+  <link name="caster_back_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+      <material name="grey">
+        <color rgba="0.3 0.3 0.3 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.030 0.009 0.020"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0"/>
+      <mass value="0.005"/>
+      <inertia ixx="2.0e-7" ixy="0" ixz="0"
+              iyy="5.42e-7" iyz="0"
+              izz="4.09e-7"/>
+    </inertial>
+  </link>
+
+  <link name="base_scan">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <!-- Small mass and inertia for the sensor frame -->
+      <mass value="0.05" />
+      <inertia ixx="0.0001" ixy="0" ixz="0"
+               iyy="0.0001" iyz="0" izz="0.0001" />
+    </inertial>
+    <!-- Small cylinder to represent the sensor mount -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.05" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.05" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="scan_joint" type="fixed">
+    <!-- Position the sensor above the chassis to avoid mesh overlap -->
+    <origin xyz="0.265 0 0.20" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="base_scan" />
+  </joint>
+
+<gazebo reference="caster_front_left">
+  <surface>
+    <friction>
+      <ode>
+        <mu>0.0</mu>
+        <mu2>0.0</mu2>
+        <slip1>1.0</slip1>
+        <slip2>1.0</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="caster_front_right">
+  <surface>
+    <friction>
+      <ode>
+        <mu>0.0</mu>
+        <mu2>0.0</mu2>
+        <slip1>1.0</slip1>
+        <slip2>1.0</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="caster_back_left">
+  <surface>
+    <friction>
+      <ode>
+        <mu>0.0</mu>
+        <mu2>0.0</mu2>
+        <slip1>1.0</slip1>
+        <slip2>1.0</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+<gazebo reference="caster_back_right">
+  <surface>
+    <friction>
+      <ode>
+        <mu>0.0</mu>
+        <mu2>0.0</mu2>
+        <slip1>1.0</slip1>
+        <slip2>1.0</slip2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
+
+  <!-- Gazebo properties for base_scan link -->
+  <gazebo reference="base_scan">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  
+  <!-- [플러그인 블록] 각 기능별 Gazebo/ROS2 플러그인 자동 삽입 -->
+  
+  
+  <!-- [DiffDrive] 차동구동 플러그인: cmd_vel/odom/tf 토픽, 조인트/파라미터 설정 -->
+  <gazebo>
+    <plugin
+      filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+      <!-- 네임스페이스 제거 - 글로벌 토픽 사용 -->
+      <topic>cmd_vel</topic>
+      <odom_topic>odom</odom_topic>
+      <tf_topic>tf</tf_topic>
+      <left_joint>wheel_left_joint</left_joint>
+      <right_joint>wheel_right_joint</right_joint>
+      <wheel_separation>0.16</wheel_separation>
+      <wheel_radius>0.033</wheel_radius>
+      <odom_publish_frequency>30</odom_publish_frequency>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_link</child_frame_id>
+      
+      <max_wheel_torque>20</max_wheel_torque>
+      
+      
+      <max_wheel_acceleration>5.0</max_wheel_acceleration>
+      
+      
+      <max_linear_velocity>0.22</max_linear_velocity>
+      
+      
+      <max_angular_velocity>2.84</max_angular_velocity>
+      
+      
+      <min_linear_velocity>-0.22</min_linear_velocity>
+      
+      
+      <min_angular_velocity>-2.84</min_angular_velocity>
+      
+      
+      <publish_wheel_joint_state>true</publish_wheel_joint_state>
+      
+      <publish_odom>true</publish_odom>
+      
+      <publish_odom_tf>true</publish_odom_tf>
+      
+    </plugin>
+  </gazebo>
+  
+  
+  
+  
+  <!-- [Lidar] 센서 플러그인: GPU Ray 기반 라이다 센서 설정 -->
+  <gazebo reference="base_scan">
+    <sensor name="hls_lfcd_lds" type="gpu_ray">
+      <pose>-0.032 0 0.171 0 0 0</pose>
+      <always_on>1</always_on>
+      <visualize>true</visualize>
+      <update_rate>30</update_rate>
+      <topic>pallet_amr/scan</topic>
+      <ignition_frame_id>base_scan</ignition_frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>3.5</max>
+          <resolution>0.015</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+    </sensor>
+  </gazebo>
+  
+  
+  
+  
+  <!-- [JointStatePublisher] 조인트 상태 퍼블리셔 플러그인 -->
+  <gazebo>
+    <plugin
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+      
+      <ros>
+        <namespace>pallet_amr</namespace>
+        <remapping>joint_states:=joint_states</remapping>
+      </ros>
+      
+      <topic>joint_states</topic>
+      <update_rate>30</update_rate>
+      
+      <joint_name>wheel_left_joint</joint_name>
+      
+      <joint_name>wheel_right_joint</joint_name>
+      
+    </plugin>
+  </gazebo>
+  
+  
+  
+  
+  <!-- [구버전 lidar] 플러그인 블록은 생략됨 (센서 블록으로 대체) -->
+  
+  
+  
+
+  <!-- [Wheel Joint] 바퀴 조인트의 Gazebo 동적 속성(마찰/댐핑) 설정 -->
+  <gazebo reference="wheel_left_joint">
+    <provideFeedback>true</provideFeedback>
+    <dynamics>
+      <damping>0.0</damping>
+      <friction>0.0</friction>
+    </dynamics>
+  </gazebo>
+  
+  <gazebo reference="wheel_right_joint">
+    <provideFeedback>true</provideFeedback>
+    <dynamics>
+      <damping>0.0</damping>
+      <friction>0.0</friction>
+    </dynamics>
+  </gazebo>
+
+  <!-- [Lidar 센서] sensor_frame 아래에 라이다 센서 추가 -->
+  
+  <gazebo reference="base_scan">
+
+    <sensor name="hls_lfcd_lds_2" type="gpu_ray">
+      <pose>0 0 0 0 0 0</pose>
+      <update_rate>10</update_rate>
+      <topic>pallet_amr/scan</topic>
+      <ignition_frame_id>base_scan</ignition_frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>3.5</max>
+          <resolution>0.01</resolution>
+        </range>
+      </ray>
+    </sensor>
+  </gazebo>
+  
+  
+
+</robot>

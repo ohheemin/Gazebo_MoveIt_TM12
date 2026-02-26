@@ -1,1 +1,0 @@
-# Gazebo_MoveIt_TM12

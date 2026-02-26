@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(tm12_gazebo_moveit)
+project(gazebo_test_bed)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
@@ -24,6 +24,18 @@ find_package(sensor_msgs REQUIRED)
 find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
 
+find_package(ignition-plugin1 REQUIRED COMPONENTS register)
+find_package(ignition-gazebo6 REQUIRED)
+find_package(ignition-transport11 REQUIRED)
+find_package(ignition-msgs8 REQUIRED)
+find_package(ignition-common4 REQUIRED)
+
+set(IGN_PLUGIN_VER 1)
+set(IGN_GAZEBO_VER 6)
+set(IGN_TRANSPORT_VER 11)
+set(IGN_MSGS_VER 8)
+set(IGN_COMMON_VER 4)
+
 add_executable(tm12_pick_and_place
   src/tm12_pick_and_place.cpp
 )
@@ -46,7 +58,6 @@ add_library(joint_position_example_controller SHARED
   src/joint_position_example_controller.cpp
 )
 
-
 target_include_directories(joint_position_example_controller PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
@@ -63,11 +74,32 @@ ament_target_dependencies(
   Eigen3
 )
 
+add_library(dynamic_gripper_plugin SHARED
+  src/dynamic_gripper_plugin.cpp
+)
+
+target_link_libraries(dynamic_gripper_plugin
+  ignition-plugin${IGN_PLUGIN_VER}::ignition-plugin${IGN_PLUGIN_VER}
+  ignition-gazebo${IGN_GAZEBO_VER}::ignition-gazebo${IGN_GAZEBO_VER}
+  ignition-transport${IGN_TRANSPORT_VER}::ignition-transport${IGN_TRANSPORT_VER}
+  ignition-msgs${IGN_MSGS_VER}::ignition-msgs${IGN_MSGS_VER}
+  ignition-common${IGN_COMMON_VER}::ignition-common${IGN_COMMON_VER}
+)
+
+target_include_directories(dynamic_gripper_plugin PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+
 install(TARGETS
   tm12_pick_and_place
   joint_position_example_controller
+  dynamic_gripper_plugin
   DESTINATION lib/${PROJECT_NAME}
 )
+
+pluginlib_export_plugin_description_file(controller_interface arm_controllers_plugin.xml)
+install(FILES arm_controllers_plugin.xml DESTINATION share/${PROJECT_NAME})
 
 install(
   DIRECTORY
@@ -77,11 +109,10 @@ install(
     urdf
     xacro
     meshes
+    srdf
+    params
+    maps
   DESTINATION share/${PROJECT_NAME}
 )
 
-pluginlib_export_plugin_description_file(controller_interface arm_controllers_plugin.xml)
-install(FILES arm_controllers_plugin.xml DESTINATION share/${PROJECT_NAME})
-
 ament_package()
-
