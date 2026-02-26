@@ -4,7 +4,7 @@
 
 <img width="650" height="360" alt="스크린샷 2026-02-25 20-11-05" src="https://github.com/user-attachments/assets/969be73d-9b62-48cd-adff-93c4d0d649d0" />
 
----
+
 
 An integrated pick-and-place and mobile robot transportation system
 
