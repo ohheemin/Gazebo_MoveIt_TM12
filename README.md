@@ -18,7 +18,7 @@ First You need Ubuntu 22.04 OS, ROS2 Humble, GAZEBO Ignition Fortress Version.
 
 And the Launch File is 
 
-tm12.launch.py (Spawn TM12 Manipulator and Mobile Manipulator, Activate Joint State BroadCaster)
+tm12.launch.py (Spawn TM12 Manipulator and Mobile Manipulator, Activate Movit API and Joint State BroadCaster)
 
 Navigation_rviz2.launch.py (Activate Nav2 Bond, Start Nav2 system with Rviz2)
 
